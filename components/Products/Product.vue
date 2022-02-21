@@ -1,3 +1,4 @@
+<!--
 <template>
     <nuxt-link :to="productLink" class="post-preview">
         <article>
@@ -8,6 +9,20 @@
             </div>
         </article>
     </nuxt-link>
+</template>
+-->
+<template>
+    <div class="col-12 col-sm-6 col-md-3">
+        <nuxt-link :to="productLink">
+            <div class="card" style="margin-bottom: 15px !important;">
+                <div class="post-thumbnail" :style="{backgroundImage: 'url('+thumbnail+')'}" ></div>
+                <div class="card-body">
+                    <h5 class="card-title">{{name}} - S/. {{price}}</h5>
+                    <p class="card-text">{{description}} - {{nameCategory}}</p>
+                </div>
+            </div>
+        </nuxt-link>
+    </div>
 </template>
 
 <script>
@@ -52,25 +67,10 @@ export default {
 </script>
 
 <style scoped>
-.post-preview {
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 2px #ccc;
-  background-color: white;
-  width: 90%;
+a:link, a:visited, a:active {
+    text-decoration:none !important;
+    color: black;
 }
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-@media (min-width: 850px) {
-  .post-preview {
-    width: 400px;
-    margin: 10px;
-  }
-}
-
 .post-thumbnail {
   width: 100%;
   height: 200px;
@@ -78,13 +78,4 @@ a {
   background-size: cover;
 }
 
-.post-content {
-  padding: 10px;
-  text-align: center;
-}
-
-a:hover .post-content,
-a:active .post-content {
-  background-color: #ccc;
-}
 </style>

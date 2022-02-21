@@ -1,17 +1,19 @@
 <template>
     <section>
-        <Product
-            v-for="product in products"
-            :key="product.id"
+        <div class="row">
+                <Product
+                    v-for="product in products"
+                    :key="product.id"
 
-            :id="product.id"
-            :is-admin="isAdmin"
-            :name="product.name"
-            :price="product.price"
-            :description="product.description"
-            :thumbnail="product.thumbnailLink"
-            :nameCategory="product.category.name"
-        />
+                    :id="product.id"
+                    :is-admin="isAdmin"
+                    :name="product.name"
+                    :price="product.price"
+                    :description="product.description"
+                    :thumbnail="product.thumbnailLink"
+                    :nameCategory="product.category.name"
+                />
+        </div>
     </section>
 </template>
 
@@ -40,14 +42,3 @@ export default {
     } */
 }
 </script>
-
-<style scoped>
-.post-list{
-  display: flex;
-  padding: 20px;
-  box-sizing: border-box;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
-</style>
