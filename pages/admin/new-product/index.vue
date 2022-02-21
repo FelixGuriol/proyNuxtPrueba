@@ -8,18 +8,21 @@
 </template>
 
 <script>
-//import axios from 'axios'//se tiene q instalar npm install --save axios
+import axios from 'axios'//se tiene q instalar npm install --save axios
 import ProductForm from '@/components/Forms/ProductForm';
 export default {
     layout:'admin',
+    middleware: ['check-auth','auth'],
     components:{
         ProductForm
     },
     methods: {
-      onSubmitted(postData){
-        //this.$store.dispatch('addPost', postData).then(()=>{
+      onSubmitted(productData){
+        //console.log(postData);
+        this.$store.dispatch('addPost', productData).then(()=>{
           this.$router.push('/admin');
-        //})
+          //console.log(postData);
+        })
       }
     }
 }

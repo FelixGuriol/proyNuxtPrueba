@@ -8,7 +8,6 @@
     <div class="spacer"></div>
     <div class="navigation-items">
       <ul class="nav-list">
-        <li class="nav-item"><nuxt-link to="/products">Products</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/admin">Admin</nuxt-link></li>
       </ul>
     </div>

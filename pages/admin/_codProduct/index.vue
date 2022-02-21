@@ -11,38 +11,43 @@ import ProductForm from '@/components/Forms/ProductForm';
 
 export default {
     layout:'admin',
+    middleware: ['check-auth','auth'],
     components:{
         ProductForm
     },
-    data(){
+/*     data(){
         return{
             loadedProduct:{
                 id: this.$route.params.codProduct,
                 name: 'Galleta',
                 price: '3.58',
                 description: 'Galleta rellena de chocolate',
-                thumbnailLink: 'https://cdn7.kiwilimon.com/recetaimagen/3329/640x426/th5-640x426-38990.jpg.webp'
+                thumbnailLink: 'https://cdn7.kiwilimon.com/recetaimagen/3329/640x426/th5-640x426-38990.jpg.webp',
+                category:{
+                    id:'1',
+                    name:'Chatarra'
+                }
             }
         }
-    },
+    }, */
 
-    /* asyncData(context){
+    asyncData(context){
         //console.log(context.params)
-        return context.app.$axios.$get('/posts/'+
-                        context.params.postId+
+        return context.app.$axios.$get('/products/'+
+                        context.params.codProduct+
                         '.json')
         .then(data => {
             return {
-                loadedProduct: {...data, id: context.params.postId}
+                loadedProduct: {...data, id: context.params.codProduct}
             }
         })
         .catch(e => context.error(e))
-    }, */
+    },
     methods:{
         onSubmitted(editedPost){
-            //this.$store.dispatch('editPost',editedPost).then(()=>{
+            this.$store.dispatch('editPost',editedPost).then(()=>{
                 this.$router.push('/admin');
-            //});
+            });
         }
     }
     /*

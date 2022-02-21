@@ -9,6 +9,13 @@
         <AppControlInput
                 control-type="textarea"
                 v-model="editedProduct.description">Descripcion</AppControlInput>
+        <!-- <div>
+            <p>Category:</p>
+            <select name="category" id="category">
+                <option value="1">Chatarra</option>
+                <option value="2">Natural</option>
+            </select>
+        </div> -->
                 
         <AppButton type="submit">Save</AppButton>
                 
@@ -42,15 +49,19 @@ export default {
                 name:'',
                 price:'',
                 thumbnailLink:'',
-                description:''
+                description:'',
+                category:{
+                    id:'1',
+                    name:'Chatarra'
+                }
             }
         }
     },
     methods:{
         onSave(){
             //Save the post
-            console.log(this.editedProduct);
-            //this.$emit('submit',this.editedPost)
+            //console.log(this.editedProduct);
+            this.$emit('submit',this.editedProduct)
         },
         onCancel(){
             //Navigate back

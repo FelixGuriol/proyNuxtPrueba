@@ -4,7 +4,7 @@
             <div class="post-thumbnail" :style="{backgroundImage: 'url('+thumbnail+')'}" ></div>
             <div class="post-content">
                 <h1>{{name}} - S/. {{price}}</h1>
-                <p>{{description}}</p>
+                <p>{{description}} - {{nameCategory}}</p>
             </div>
         </article>
     </nuxt-link>
@@ -35,6 +35,10 @@ export default {
             required: true
         },
         thumbnail:{
+            type: String,
+            required: true
+        },
+        nameCategory:{
             type: String,
             required: true
         }

@@ -13,7 +13,7 @@ export default {
   components: {
     ListProducts
   },
-  data(){
+/*   data(){
     return{
       loadedProducts:[
         {
@@ -21,23 +21,31 @@ export default {
           name: 'Galleta',
           price: '3.58',
           description: 'Galleta rellena de chocolate',
-          thumbnailLink: 'https://cdn7.kiwilimon.com/recetaimagen/3329/640x426/th5-640x426-38990.jpg.webp'
+          thumbnailLink: 'https://cdn7.kiwilimon.com/recetaimagen/3329/640x426/th5-640x426-38990.jpg.webp',
+          category:{
+            id:'1',
+            name:'Chatarra'
+          }
         },
         {
           id:'2',
           name: 'Galletita',
           price: '3.58',
           description: 'Galletatita rellena de chocolate',
-          thumbnailLink: 'https://cdn7.kiwilimon.com/recetaimagen/3329/640x426/th5-640x426-38990.jpg.webp'
+          thumbnailLink: 'https://cdn7.kiwilimon.com/recetaimagen/3329/640x426/th5-640x426-38990.jpg.webp',
+          category:{
+            id:'1',
+            name:'Chatarra'
+          }
         }
       ]
     }
-  }
-/*   computed:{
-    loadedPosts(){
-      return this.$store.getters.loadedPosts
-    }
   } */
+  computed:{
+    loadedProducts(){
+      return this.$store.getters.loadedProducts
+    }
+  }
 }
 </script>
 

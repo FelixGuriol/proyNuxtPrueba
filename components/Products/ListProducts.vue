@@ -10,6 +10,7 @@
             :price="product.price"
             :description="product.description"
             :thumbnail="product.thumbnailLink"
+            :nameCategory="product.category.name"
         />
     </section>
 </template>

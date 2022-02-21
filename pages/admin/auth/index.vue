@@ -35,7 +35,7 @@ export default {
   },
   methods:{
     onSubmit(){
-      /* this.$store.dispatch('authenticateUser',{
+      this.$store.dispatch('authenticateUser',{
         isLogin: this.isLogin,
         email: this.email,
         password: this.password
@@ -43,7 +43,7 @@ export default {
       .then(()=>{
         this.$router.push('/admin')
       })
-      .catch() */
+      .catch()
     }
   }
 }
