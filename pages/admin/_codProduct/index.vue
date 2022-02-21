@@ -17,7 +17,7 @@ export default {
     data(){
         return{
             loadedProduct:{
-                id: '1',
+                id: this.$route.params.codProduct,
                 name: 'Galleta',
                 price: '3.58',
                 description: 'Galleta rellena de chocolate',
