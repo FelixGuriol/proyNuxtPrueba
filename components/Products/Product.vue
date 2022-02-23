@@ -1,6 +1,7 @@
 <template>
     <nuxt-link :to="productLink">
-        <div class="rounded overflow-hidden shadow-lg bg-white"><!--max-w-sm: hace q el card tenga dimensiones estaticas-->
+        <!--max-w-sm: hace q el card tenga dimensiones estaticas-->
+        <div class="card bg-white">
             <img class="w-full" :src="thumbnail">
             <div class="px-6 py-4">
                 <div class="font-bold text-xl mb-2">
@@ -23,6 +24,24 @@
         </article> -->
     </nuxt-link>
 </template>
+<!-- <template>
+    <div class="w-full sm:w-1/2 md:w-1/3 px-2">
+        <div class="card bg-white">
+            <img class="w-full" :src="thumbnail">
+            <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2">
+                    {{name}} - S/. {{price}}
+                </div>
+                <p class="text-gray-700 text-left">
+                    {{description}}
+                </p>
+            </div>
+            <div class="px-6 py-4 flow-root">
+                <span class="category">#{{nameCategory}}</span>
+            </div>
+        </div>
+    </div>
+</template>-->
 
 <script>
 export default {

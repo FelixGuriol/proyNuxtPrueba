@@ -1,5 +1,5 @@
 <template>
-    <div class="container mx-auto mt-5 text-center">
+    <div class="container mx-auto mt-5">
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
             <Product
                 v-for="product in products"
@@ -14,6 +14,20 @@
                 :nameCategory="product.category.name"
             />
         </div>
+        <!-- <div class="flex -mx-2 flex-wrap">
+                <Product
+                    v-for="product in products"
+                    :key="product.id"
+
+                    :id="product.id"
+                    :is-admin="isAdmin"
+                    :name="product.name"
+                    :price="product.price"
+                    :description="product.description"
+                    :thumbnail="product.thumbnailLink"
+                    :nameCategory="product.category.name"
+                />
+        </div> -->
     </div>
     
     
