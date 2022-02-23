@@ -1,6 +1,6 @@
 <template>
-    <div class="container mx-auto mt-5">
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="container mx-auto">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mx-2">
             <Product
                 v-for="product in products"
                 :key="product.id"
