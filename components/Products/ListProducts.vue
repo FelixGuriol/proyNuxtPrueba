@@ -1,18 +1,25 @@
 <template>
-    <section>
-        <Product
-            v-for="product in products"
-            :key="product.id"
+    <div class="container mx-auto mt-5 text-center">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+            <Product
+                v-for="product in products"
+                :key="product.id"
 
-            :id="product.id"
-            :is-admin="isAdmin"
-            :name="product.name"
-            :price="product.price"
-            :description="product.description"
-            :thumbnail="product.thumbnailLink"
-            :nameCategory="product.category.name"
-        />
-    </section>
+                :id="product.id"
+                :is-admin="isAdmin"
+                :name="product.name"
+                :price="product.price"
+                :description="product.description"
+                :thumbnail="product.thumbnailLink"
+                :nameCategory="product.category.name"
+            />
+        </div>
+    </div>
+    
+    
+    <!-- <section>
+        
+    </section> -->
 </template>
 
 <script>
@@ -40,7 +47,7 @@ export default {
     } */
 }
 </script>
-
+<!--
 <style scoped>
 .post-list{
   display: flex;
@@ -50,4 +57,4 @@ export default {
   align-items: center;
   justify-content: center;
 }
-</style>
+</style>-->

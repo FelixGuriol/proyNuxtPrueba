@@ -1,5 +1,5 @@
 <template>
-  <div class="home-page">
+  <div class="bg-gray-100">
     <section class="intro">
       <h1>Get the latest tech mews!</h1>
     </section>

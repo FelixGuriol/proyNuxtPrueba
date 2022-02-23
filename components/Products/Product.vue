@@ -1,12 +1,26 @@
 <template>
-    <nuxt-link :to="productLink" class="post-preview">
-        <article>
+    <nuxt-link :to="productLink">
+        <div class="rounded overflow-hidden shadow-lg bg-white"><!--max-w-sm: hace q el card tenga dimensiones estaticas-->
+            <img class="w-full" :src="thumbnail">
+            <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2">
+                    {{name}} - S/. {{price}}
+                </div>
+                <p class="text-gray-700 text-left">
+                    {{description}}
+                </p>
+            </div>
+            <div class="px-6 py-4 flow-root">
+                <span class="category">#{{nameCategory}}</span>
+            </div>
+        </div>
+        <!-- <article>
             <div class="post-thumbnail" :style="{backgroundImage: 'url('+thumbnail+')'}" ></div>
             <div class="post-content">
                 <h1>{{name}} - S/. {{price}}</h1>
                 <p>{{description}} - {{nameCategory}}</p>
             </div>
-        </article>
+        </article> -->
     </nuxt-link>
 </template>
 
@@ -50,7 +64,7 @@ export default {
     }
 }
 </script>
-
+<!--
 <style scoped>
 .post-preview {
   border: 1px solid #ccc;
@@ -87,4 +101,4 @@ a:hover .post-content,
 a:active .post-content {
   background-color: #ccc;
 }
-</style>
+</style>-->
